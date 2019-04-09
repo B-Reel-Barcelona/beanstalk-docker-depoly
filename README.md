@@ -1,5 +1,5 @@
-# beanstalk-docker-depoly
-A docker image that provide tools for deploying an Elastic Beanstalk application.
+# beanstalk-docker-deploy
+A docker image that provides tools for deploying an Elastic Beanstalk application.
 
 
 ## Elastic Beanstalk example templates:
