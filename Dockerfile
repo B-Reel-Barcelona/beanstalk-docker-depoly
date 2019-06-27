@@ -15,7 +15,7 @@ RUN apk -v --update add \
         jq \
         openssh \
         && \
-    pip install --upgrade awscli s3cmd awsebcli python-magic ecs-deploy && \
+    pip install --upgrade awscli s3cmd awsebcli python-magic ecs-deploy setuptools && \
     apk -v --purge del py-pip && \
     rm /var/cache/apk/*
 
