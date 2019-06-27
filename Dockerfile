@@ -1,4 +1,4 @@
-FROM docker:dind
+FROM docker:latest
 
 RUN apk -v --update add \
         python \
@@ -16,7 +16,10 @@ RUN apk -v --update add \
     apk -v --purge del py-pip && \
     rm /var/cache/apk/*
 
+RUN python -v
 RUN node -v
+RUN aws --version
+
 COPY ./eb-deploy /eb-deploy
 
 RUN chmod +x /eb-deploy/addAwsCredentials.sh
