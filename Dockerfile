@@ -10,6 +10,9 @@ RUN apk -v --update add \
         nodejs-npm \
         bash \
         git \
+        ca-certificates \
+        curl \
+        jq \
         openssh \
         && \
     pip install --upgrade awscli s3cmd awsebcli python-magic ecs-deploy && \
