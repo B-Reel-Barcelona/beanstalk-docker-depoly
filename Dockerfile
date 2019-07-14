@@ -14,9 +14,12 @@ RUN apk -v --update add \
    curl \
    jq \
    openssh \
+   curl \
    && \
    pip install --upgrade awscli s3cmd awsebcli python-magic ecs-deploy setuptools && \
    rm /var/cache/apk/*
+
+RUN echo "$(curl -s https://amazon-ecs-cli.s3.amazonaws.com/ecs-cli-linux-amd64-latest.md5) /usr/local/bin/ecs-cli" | md5sum -c -
 
 RUN python -v
 RUN node -v
