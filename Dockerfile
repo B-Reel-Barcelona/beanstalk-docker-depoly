@@ -14,6 +14,9 @@ RUN apt-get -y install \
     lxc \
     iptables
 
+# Install ECS-CLI
+RUN curl -o /usr/local/bin/ecs-cli https://amazon-ecs-cli.s3.amazonaws.com/ecs-cli-linux-amd64-latest
+
 # Install Docker from Docker Inc. repositories.
 RUN curl -sSL https://get.docker.com/ | sh
 
