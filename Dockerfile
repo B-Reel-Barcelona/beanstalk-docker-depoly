@@ -20,6 +20,7 @@ RUN apk -v --update add \
    rm /var/cache/apk/*
 
 RUN curl -o /usr/local/bin/ecs-cli https://amazon-ecs-cli.s3.amazonaws.com/ecs-cli-linux-amd64-latest
+RUN chmod +x /usr/local/bin/ecs-cli
 
 RUN python -v
 RUN node -v
