@@ -24,6 +24,7 @@ RUN chmod +x /usr/local/bin/ecs-cli
 
 RUN python -v
 RUN node -v
+RUN npm install ecs-deployment-monitor -g
 RUN aws --version
 
 COPY ./eb-deploy /eb-deploy
