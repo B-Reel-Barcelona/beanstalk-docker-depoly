@@ -24,6 +24,7 @@ RUN chmod +x /usr/local/bin/wrapdocker
 RUN pip install --upgrade pip
 RUN pip install awsebcli ecs-deploy --upgrade
 RUN node -v
+RUN npm install ecs-deployment-monitor -g
 COPY ./eb-deploy /eb-deploy
 
 RUN chmod +x /eb-deploy/addAwsCredentials.sh
